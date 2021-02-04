@@ -26,19 +26,17 @@ Function returns pandas dataframe.
 
 ### Dataframe columns
 
-> .add(a,b) - returns sum of a and b
+* num_rooms - number of rooms in apartment
+* area - area in sq. meters of apartment
+* years_built - years when the object was built
+* heating - heating system in the apartment
+* completeness - level of completeness of the apartment
+* district - specific Vilnius district where the object is
+* price - wanted price by the owner in EUR
 
-> .substract(a,b) - returns b substracted from a
+### Testing
 
-> .multiply(a,b) - returns product of a and b
-
-> .divide(a,b) - returns division a from b
-
-> .n_root(a,n) - returns n root of a
-
-> .previous_result() - returns previous result
-
-> .memory_reset() - resets memory
+![](https://raw.githubusercontent.com/ovidijusku/vilnius_apartments/main/test/test.bmp)
 
 ### License
 
