@@ -11,7 +11,7 @@ setuptools.setup(
     description="A small example package of web scrapper that extracts apartments data",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/ovidijusku/vilnius_apartments/tree/main/module",
+    url="https://github.com/ovidijusku/vilnius_apartments/",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
