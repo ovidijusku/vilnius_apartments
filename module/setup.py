@@ -4,14 +4,14 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="example-pkg-obis-van-kenobis",
+    name="Aruodas_web_scrapper",
     version="0.0.1",
     author="Ovidijus",
     author_email="ovidijus@example.com",
-    description="A small example package of Calculator",
+    description="A small example package of web scrapper that extracts apartments data",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/ovidijusku/calc",
+    url="https://github.com/ovidijusku/vilnius_apartments/tree/main/module",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
