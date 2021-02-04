@@ -35,49 +35,59 @@ def scrapper(expected_items: int) -> pd.DataFrame:
             int(price.text.split(" €")[0].split("\n")[1].replace(" ", ""))
             for price in soup.find_all("span", class_="item-price-main-v3")
         ]
-        prices_list.extend(prices)
 
         # extracting districs
         districts = [
             district.text.split(",")[0].split()[-1]
             for district in soup.find_all("span", class_="item-address-v3")
         ]
-        districts_list.extend(districts)
 
         # extracting room number
         num_rooms = [
             int(rooms.text.split(" rooms")[0].split()[-1])
             for rooms in soup.find_all("span", class_="item-description-v3")
         ]
-        num_rooms_list.extend(num_rooms)
 
         # extracting area size
         area = [
             float(area.text.split("rooms, ")[1].split(" m²,")[0].replace(",", "."))
             for area in soup.find_all("span", class_="item-description-v3")
         ]
-        area_list.extend(area)
 
         # extracting years when objects were built
         built = [
             int(year.text.split(" year,")[0].split(", ")[-1])
             for year in soup.find_all("span", class_="item-description-v3")
         ]
-        built_years_list.extend(built)
 
         # extracting heating systems
         heating = [
             heating.text.split(", ")[-2]
             for heating in soup.find_all("span", class_="item-description-v3")
         ]
-        heating_list.extend(heating)
 
         # extracting completeness
         completeness = [
             completeness.text.split(", ")[-1].split("  ")[0]
             for completeness in soup.find_all("span", class_="item-description-v3")
         ]
-        completeness_list.extend(completeness)
+        # checking if all lists have the same lenght:
+        if (
+            len(prices)
+            == len(districts)
+            == len(num_rooms)
+            == len(area)
+            == len(built)
+            == len(heating)
+            == len(completeness)
+        ):
+            prices_list.extend(prices)
+            districts_list.extend(districts)
+            num_rooms_list.extend(num_rooms)
+            area_list.extend(area)
+            built_years_list.extend(built)
+            heating_list.extend(heating)
+            completeness_list.extend(completeness)
 
         # delay in order to prevent from robots buster
         time.sleep(2)
