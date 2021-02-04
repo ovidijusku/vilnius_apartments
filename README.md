@@ -20,7 +20,7 @@ This project is based on Python 3.8. It consist of [scrapping function](https://
 
 > apartments_df = apartments.scrapper(apartments_count)
 
-Apartments count should be inserted as an integer which shows how long should be the dataset.
+apartments_count should be inserted as an integer which shows how long should be the dataset.
 
 Function returns pandas dataframe.
 
