@@ -107,6 +107,6 @@ def scrapper(expected_items: int) -> pd.DataFrame:
     }
 
     # creating dataframe
-    apartments_df = pd.DataFrame.from_dict(apartments_dict)
-
+    apartments_df = pd.DataFrame.from_dict(apartments_dict, orient="index")
+    apartments_df = apartments_df.transpose()
     return apartments_df
