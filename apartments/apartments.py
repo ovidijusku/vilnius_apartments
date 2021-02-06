@@ -68,7 +68,7 @@ def scrapper(expected_items: int) -> pd.DataFrame:
 
         # extracting completeness
         completeness = [
-            completeness.text.split(", ")[-1].split("  ")[0]
+            completeness.text.split(", ")[-1].split(" ")[0]
             for completeness in soup.find_all("span", class_="item-description-v3")
         ]
         # checking if all lists have the same lenght:
@@ -101,7 +101,7 @@ def scrapper(expected_items: int) -> pd.DataFrame:
         "area": area_list[:expected_items],
         "years_built": built_years_list[:expected_items],
         "heating": heating_list[:expected_items],
-        "completeness": completeness[:expected_items],
+        "completeness": completeness_list[:expected_items],
         "district": districts_list[:expected_items],
         "price": prices_list[:expected_items],
     }
