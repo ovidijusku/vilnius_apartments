@@ -5,6 +5,7 @@ This project is based on Python 3.8. It consist of [scrapping function](https://
 ### Dependencies
 * Python >= 3.6;
 * pandas;
+* BeautifulSoup;
 * requests;
 * pytest (for testing only).
 
